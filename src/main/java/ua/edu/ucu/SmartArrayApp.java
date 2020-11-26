@@ -1,6 +1,5 @@
 package ua.edu.ucu;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import ua.edu.ucu.functions.MyComparator;
 import ua.edu.ucu.functions.MyFunction;
@@ -81,12 +80,12 @@ public class SmartArrayApp {
         SmartArray studentSmartArray = new BaseArray(students);
 
 
-        studentSmartArray = new DistinctDecorator (
+        studentSmartArray = new DistinctDecorator(
                 new MapDecorator(
                 new SortDecorator(
                         new FilterDecorator(studentSmartArray, pr),
                         cmp),
-                func) );
+                func));
 
         Object[] result = studentSmartArray.toArray();
         return Arrays.copyOf(result, result.length, String[].class);
