@@ -45,4 +45,10 @@ class Student {
         return name.equals(other.name) && surname.equals(other.surname)
                 && GPA == other.GPA && year == other.year;
     }
+
+    @Override
+    public int hashCode() {
+        assert false;
+        return 42;
+    }
 }
