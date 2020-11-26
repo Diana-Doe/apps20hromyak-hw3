@@ -42,8 +42,7 @@ class Student {
             return false;
         }
         Student other = (Student) s;
-        return name.equals(other.name) && surname.equals(other.surname)
-                && GPA == other.GPA && year == other.year;
+        return s.toString().equals(other.toString());
     }
 
     @Override
